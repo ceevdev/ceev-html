@@ -1,28 +1,20 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+function loadIndex() {
+  const whatsapp = document.getElementById("whatsapp-button");
+  whatsapp.addEventListener("click", () => {
+    const phoneNumber = "+554132522450";
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=${encodeURIComponent(phoneNumber)}&type=phone_number&app_absent=0`;
+    window.open(whatsappUrl, '_blank');
+  });
+  
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    const links = document.getElementById("links");
+    if (links.classList.contains("expanded")) {
+      links.classList.remove("expanded");
+    } else {
+      links.classList.add("expanded");
+    }
+  });
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+document.addEventListener("DOMContentLoaded", loadIndex);

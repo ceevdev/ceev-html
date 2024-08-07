@@ -11,6 +11,13 @@ body {
     overflow-x: hidden;
 }
 
+.divider {
+    width: 100vw;
+    height: 10px;
+    background-color: #027373;
+    margin-bottom: 20px;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -18,288 +25,114 @@ header {
     padding: 0px 50px;
     background-color: #fff;
     border-bottom: 10px solid #027373;
+    height: 15vh;
+    position: relative;
 }
 
-header img {
-    height: 128px;
+header img.logo {
+    max-width: 100%;
+    height: auto;
     width: 221px;
+    height: 128px;
 }
 
-header #links {
+@media (max-width: 768px) {
+    header img.logo {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header img.logo {
+        width: 40%;
+        height: auto;
+    }
+}
+
+#links {
     display: flex;
     align-items: center;
+    list-style-type: none;
     gap: 20px;
+    margin: 0;
 }
 
-header #links a {
-    font-size: 18px;
+#links li {
+    margin: 0;
+}
+
+#links a {
+    font-size: 1.1vw;
     text-decoration: none;
     color: #333;
     transition: color 0.3s;
 }
 
-header #links a:hover {
+#links #selected {
     color: #027373;
 }
 
-header #social-medias a {
+#links a:hover {
+    color: #027373;
+}
+
+#social-medias a {
     text-decoration: none;
 }
 
-header #social-medias a img {
+#social-medias a img {
     height: 40px;
     width: 40px;
     margin-left: 5px;
     transition: transform 0.3s;
 }
 
-header #social-medias a img:hover {
+#social-medias a img:hover {
     transform: scale(1.1);
 }
 
-.button {
-    background-color: #027373;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #035b5b;
-}
-
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
+.menu-toggle {
     display: none;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 8px;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(43, 43, 43, 0.7);
-}
-
-.numbertext {
-    font-weight: bold;
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
+@media (max-width: 768px) and (orientation: landscape) {
+    #links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 10px solid #027373;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+        max-height: 0;
     }
-
-    to {
-        opacity: 1
+    
+    #links.expanded {
+        display: flex;
+        max-height: 500px; /* Ajuste conforme necessário */
+    }
+    
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .menu-toggle img {
+        width: 30px;
+        height: auto;
     }
 }
 
-.school-info {
-    background-image: url("../img/banner.png");
-    background-repeat: no-repeat;
-    background-size: fill;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    height: 400px;
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
 }
 
-.school-info div {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 10px;
-}
-
-.school-info div h1 {
-    color: #027373;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 500;
-}
-
-.school-info div h3 {
-    color: white;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-}
-
-.school-info h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.school-news .head, .school-gallery .head {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.school-news .head img, .school-gallery .head img {
-    margin-left: 50px;
-    height: 48px;
-    width: 48px;
-}
-
-.school-news .head h1, .school-gallery .head h1 {
-    font-family: 'League Spartan', sans-serif;
-    font-size: 48px;
-    color: #474747;
-}
-
-.school-news .content, .school-gallery .content {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    padding: 50px 0px 50px 0px;
-    gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #027373;
-}
-
-.school-news .news-item, .school-gallery img {
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-}
-
-.school-news .news-item img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(50%);
-    transition: transform 0.3s;
-}
-
-.school-news .news-item img:hover {
-    transform: scale(1.1);
-}
-
-.school-news .news-item .button {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.school-app {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgb(8, 159, 218);
-    background: linear-gradient(0deg, rgba(8, 159, 218, 1) 0%, rgba(46, 67, 105, 1) 100%);
-    text-align: center;
-    gap: 30px;
-    padding: 40px;
-}
-
-.school-app .info {
-    width: 30%;
-}
-
-.school-app .info h1 {
-    font-family: "Red Rose", sans-serif;
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.school-app .info h3 {
-    font-family: "Red Hat Display", sans-serif;
-    font-size: 48px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.school-app .info h3 b {
-    color: #374469;
-}
-
-.school-app .info h4 {
-    font-family: "Roboto";
-    font-weight: 800;
-    font-size: 25px;
-    color: white;
-    text-align: start;
-}
-
-.school-app .info p {
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: 300;
-    color: #fff;
-    text-align: start;
-}
-
-.school-app .info .download-button {
-    padding: 10px;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    color: white;
-    background-color: #2C4971;
-    border-radius: 30px;
-    text-decoration: none;
-    filter: drop-shadow(5px 5px 10px #0000003b);
-}
 
 footer {
     display: flex;
@@ -315,12 +148,12 @@ footer div {
 
 footer h2 {
     font-family: 'League Spartan', sans-serif;
-    font-size: 24px;
+    font-size: 1.5vw;
     margin-bottom: 20px;
 }
 
 footer p, footer a, footer ul {
-    font-size: 16px;
+    font-size: 0.8vw;
 }
 
 footer ul {
