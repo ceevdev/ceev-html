@@ -14,7 +14,7 @@ body {
 .divider {
     width: 100vw;
     height: 10px;
-    background-color: #027373;
+    background-color: #148F31;
     margin-bottom: 20px;
 }
 
@@ -24,7 +24,7 @@ header {
     justify-content: space-between;
     padding: 0px 50px;
     background-color: #fff;
-    border-bottom: 10px solid #027373;
+    border-bottom: 10px solid #148F31;
     height: 15vh;
     position: relative;
 }
@@ -70,11 +70,11 @@ header img.logo {
 }
 
 #links #selected {
-    color: #027373;
+    color: #148F31;
 }
 
 #links a:hover {
-    color: #027373;
+    color: #148F31;
 }
 
 #social-medias a {
@@ -105,7 +105,7 @@ header img.logo {
         left: 0;
         width: 100%;
         background-color: #fff;
-        border-top: 10px solid #027373;
+        border-top: 10px solid #148F31;
         transition: max-height 0.3s ease-out;
         overflow: hidden;
         max-height: 0;
@@ -161,7 +161,7 @@ footer ul {
 }
 
 footer a {
-    color: #027373;
+    color: #148F31;
     text-decoration: none;
 }
 
