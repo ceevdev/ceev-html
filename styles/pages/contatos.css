@@ -63,3 +63,12 @@
 #contacts #contacts-frame .contact .contact-info a{
     color: #148F31;
 }
+
+@media screen and (max-width: 780px) {
+    #contacts #contacts-frame h1 {
+        font-size: 4.3vw;
+    }
+    #contacts #contacts-frame .contact .contact-info h1 {
+        font-size: 3vw;
+    }
+}

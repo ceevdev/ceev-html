@@ -134,3 +134,25 @@
     border-radius: 8px;
     object-fit: cover;
 }
+
+@media screen and (max-width: 780px) {
+    .info h1 {
+        font-size: 5vw;
+    }
+    
+    .info .info-texts p {
+        font-size: 2.3vw;
+    }
+
+    .sport-categorys {
+        flex-direction: column;
+    }
+
+    .sport-category {
+        width: 75%;
+    }
+
+    .sport-category a {
+        font-size: 3.5vw;
+    }
+}

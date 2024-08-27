@@ -14,17 +14,17 @@
 <body>
     <header>
         <img src="./img/logo.svg" alt="Logo Colégio Estadual Ernani Vidal" class="logo" />
-        <div class="menu-toggle" id="menu-toggle">
+        <button id="menu-toggle" style="display: none;">
             <img src="./img/icons/menu-hamburger.png" alt="Menu" />
-        </div>
-        <ul id="links">
+        </button>
+        <ul class="links" style="display: none;">
             <li><a href="index.html" id="selected">Home</a></li>
             <li><a href="sobre.html">Sobre o colégio</a></li>
             <li><a href="contatos.html">Contatos</a></li>
-            <li><a href="">Notícias</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
             <li><a href="esportes.html">Esportes</a></li>
         </ul>
-        <div id="social-medias">
+        <div class="social-medias" style="display: none;">
             <a href="https://www.instagram.com/c.e.ernani_vidal/">
                 <img src="./img/social-media/Instagram.png" alt="Instagram">
             </a>
@@ -38,7 +38,10 @@
                 <img src="./img/social-media/GitHub.png" alt="GitHub">
             </a>
         </div>
-    </header>      
+    </header>
+    <div id="menu-hamburger" class="fade-menu" style="display: none;">
+        <!-- Links e social medias serão inseridos aqui dinamicamente -->
+    </div>    
     <div class="slideshow-container">
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
@@ -49,13 +52,13 @@
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="./img/slideshow-images/riograndedosul.png" alt="Banner da campanha de arrecadação para o Rio Grande do Sul" style="width:100%; height: 650px;">
+            <img src="./img/slideshow-images/banner_isa.jpg" alt="Banner da convocação" style="width:100%; height: 650px;">
         </div>
 
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="./img/slideshow-images/arraia.png" alt="Banner do Arraiá" style="width:100%; height: 650px;">
+            <img src="./img/slideshow-images/banner_base.png" alt="Banner com informações do colégio" style="width:100%; height: 650px;">
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

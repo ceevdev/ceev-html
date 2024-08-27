@@ -13,17 +13,17 @@
 <body>
     <header>
         <img src="./img/logo.svg" alt="Logo Colégio Estadual Ernani Vidal" class="logo" />
-        <div class="menu-toggle" id="menu-toggle">
+        <button id="menu-toggle" style="display: none;">
             <img src="./img/icons/menu-hamburger.png" alt="Menu" />
-        </div>
-        <ul id="links">
+        </button>
+        <ul class="links" style="display: none;">
             <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html" id="selected">Sobre o colégio</a></li>
             <li><a href="contatos.html">Contatos</a></li>
-            <li><a href="">Notícias</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
             <li><a href="esportes.html">Esportes</a></li>
         </ul>
-        <div id="social-medias">
+        <div class="social-medias" style="display: none;">
             <a href="https://www.instagram.com/c.e.ernani_vidal/">
                 <img src="./img/social-media/Instagram.png" alt="Instagram">
             </a>
@@ -38,6 +38,9 @@
             </a>
         </div>
     </header>
+    <div id="menu-hamburger" class="fade-menu" style="display: none;">
+        <!-- Links e social medias serão inseridos aqui dinamicamente -->
+    </div>
 
     <section id="about">
         <div class="texts">
@@ -77,6 +80,32 @@
                 </div>
             </div>
             <div>
+                <h1>Direção</h1>
+                <h3>
+                    O Colégio Ernani Vidal tem a sorte de contar com um diretor como Mário Cerdeira Fidalgo, cuja
+                    trajetória é marcada por dedicação e paixão pela educação. Desde sua entrada na instituição em 2011
+                    como professor de educação física, Mário demonstrou um profundo compromisso com seus alunos,
+                    estimulando não apenas seu desenvolvimento físico, mas também sua formação integral.
+                    Durante sua gestão como professor, que se estendeu até 2020, Mário estabeleceu um forte
+                    relacionamento com a comunidade escolar, mostrando-se um educador que vai além do conteúdo
+                    programático. Ele implementou iniciativas inovadoras que incentivavam a prática esportiva e a
+                    valorização do trabalho em equipe, promovendo valores como disciplina e respeito. Sua capacidade de
+                    ouvir e se conectar com os alunos fez dele uma figura respeitada e querida entre os estudantes e
+                    colegas.
+                    Em 2021, quando assumiu a função de diretor, Mário trouxe essa mesma filosofia de liderança para a
+                    gestão da escola. Ele não apenas administra o colégio, mas promove uma cultura de inclusão e
+                    excelência, onde cada membro da comunidade escolar se sente ouvido e valorizado. Suas reuniões são
+                    pautadas pelo diálogo aberto, e ele incentiva os professores a explorarem novas abordagens
+                    pedagógicas, criando um ambiente dinâmico e inovador.
+                    Mário transforma desafios em oportunidades, sempre com um olhar atento ao futuro. Seu entusiasmo e
+                    visão motivam a equipe a buscar constantemente maneiras de melhorar o aprendizado dos alunos. Sob
+                    sua liderança, o Colégio Ernani Vidal tornou-se um espaço onde o conhecimento é despertado e os
+                    sonhos são cultivados, contribuindo para a formação de cidadãos críticos e conscientes.
+                    Em resumo, Mário não é apenas um gestor eficaz, mas um verdadeiro líder que inspira todos ao seu
+                    redor, mostrando que a educação é, de fato, um caminho de constantes descobertas e possibilidades.
+                </h3>
+            </div>
+            <div>
                 <h1>Nossa proposta</h1>
                 <h3>Nosso compromisso é fornecer uma educação de alta qualidade que prepare os alunos para os desafios
                     do futuro. Com uma equipe de professores dedicados e uma infraestrutura moderna, buscamos
@@ -89,7 +118,9 @@
                 <h1>Onde estamos localizados?</h1>
                 <h3>Rua Mateus Leme, 3291 São Lourenço 82.200-000 - Curitiba - PR</h3>
             </div>
-            <a href="http://www.consultaescolas.pr.gov.br/consultaescolas-java/pages/templates/initial2.jsf?windowId=d52&codigoMunicipio=690&codigoEstab=444">Consulte nossa escola</a>
+            <a
+                href="http://www.consultaescolas.pr.gov.br/consultaescolas-java/pages/templates/initial2.jsf?windowId=d52&codigoMunicipio=690&codigoEstab=444">Consulte
+                nossa escola</a>
             <div class="images">
                 <div class="image-container">
                     <img src="./img/gallery/schoolfront.jpeg" />
@@ -110,7 +141,7 @@
             <a href="#">Política de Privacidade</a>
         </div>
         <div>
-            <p>Copyright &copy  2024 Por Prof. Élcio & Prof. Ledson | 3ºAno 2024</p>
+            <p>Copyright &copy 2024 Por Prof. Élcio & Prof. Ledson | 3ºAno 2024</p>
         </div>
     </footer>
 

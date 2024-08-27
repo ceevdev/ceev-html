@@ -121,8 +121,9 @@
     align-items: center;
     justify-content: center;
     padding: 50px;
-    height: 400px;
+    height: auto;
     width: 100%;
+    margin-top: 10px;
 }
 
 .school-info div {
@@ -132,6 +133,8 @@
     align-items: start;
     justify-content: center;
     gap: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .school-info div h1 {
@@ -211,7 +214,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(8, 159, 218);
     background: linear-gradient(0deg, rgba(8, 159, 218, 1) 0%, rgba(46, 67, 105, 1) 100%);
     text-align: center;
     gap: 30px;
@@ -273,4 +275,27 @@
 
 .school-app .info .download-button:hover {
     transform: translateY(2px);
+}
+
+@media screen and (max-width: 780px) {
+    .school-info div {
+        width: 100%;
+    }
+
+    .school-news .content, .school-gallery .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .school-news .news-item, .school-gallery img {
+        width: 60%;
+    }
+
+    .school-app {
+        flex-direction: column;
+    }
+
+    .school-app .info {
+        width: 100%;
+    }
 }
