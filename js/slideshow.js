@@ -1,6 +1,15 @@
 let slideIndex = 0;
 let autoSlideTimeout;
 
+function setSlideHeight() {
+  const slides = document.getElementsByClassName("mySlides");
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].querySelector("img").style.height = isPortrait ? "30vh" : "650px";
+  }
+}
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -39,3 +48,9 @@ function currentSlide(n) {
 
 // Start the slideshow
 showSlides(slideIndex = 1);
+
+// Set the initial slide height
+setSlideHeight();
+
+// Add an event listener for orientation changes
+window.addEventListener("resize", setSlideHeight);

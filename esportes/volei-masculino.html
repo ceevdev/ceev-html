@@ -13,22 +13,22 @@
 <body>
     <header>
         <img src="../img/logo.svg" alt="Logo Colégio Estadual Ernani Vidal" class="logo" />
-        <div class="menu-toggle" id="menu-toggle">
-            <img src="./img/icons/menu-hamburger.png" alt="Menu" />
-        </div>
-        <ul id="links">
+        <button id="menu-toggle" style="display: none;">
+            <img src="../img/icons/menu-hamburger.png" alt="Menu" />
+        </button>
+        <ul class="links" style="display: none;">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../sobre.html">Sobre o colégio</a></li>
             <li><a href="../contatos.html">Contatos</a></li>
-            <li><a href="">Notícias</a></li>
+            <li><a href="../noticias.html">Notícias</a></li>
             <li><a href="../esportes.html" id="selected">Esportes</a></li>
         </ul>
-        <div id="social-medias">
+        <div class="social-medias" style="display: none;">
             <a href="https://www.instagram.com/c.e.ernani_vidal/">
                 <img src="../img/social-media/Instagram.png" alt="Instagram">
             </a>
             <!-- <a href="https://www.tiktok.com/@terceiraoceev">
-                <img src="../img/social-media/TikTok.png" alt="TikTok">
+                <img src="./img/social-media/TikTok.png" alt="TikTok">
             </a> -->
             <a href="https://www.instagram.com/c.e.ernani_vidal/">
                 <img src="../img/social-media/Facebook.png" alt="Facebook">
@@ -38,6 +38,9 @@
             </a>
         </div>
     </header>
+    <div id="menu-hamburger" class="fade-menu" style="display: none;">
+        <!-- Links e social medias serão inseridos aqui dinamicamente -->
+    </div>
 
     <section id="sports">
         <div class="info">
@@ -69,7 +72,7 @@
         </div>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
